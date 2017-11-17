@@ -7,12 +7,12 @@ namespace Bno055
     public class Tracker : MonoBehaviour
     {
         public bool IsDebug = false;
+        public Vector3 Acceleration;
 
         private IDataReceiver DataReceiver;
-        private float roll, pitch, yaw, alt, temp;
+        private float roll, pitch, yaw;
         private Quaternion rotation;
-        private Vector3 accelVec;
-
+        
         void Awake()
         {
             DataReceiver = GetComponentInChildren<IDataReceiver>();
@@ -30,7 +30,7 @@ namespace Bno055
         {
             // var q = Quaternion.Euler(pitch, yaw, roll);
             transform.rotation = rotation;
-            Debug.Log(accelVec.magnitude);
+            Debug.Log(Acceleration.magnitude);
         }
 
         void DataReceiver_OnDataReceived(string incoming)
@@ -56,15 +56,7 @@ namespace Bno055
                     var x = float.Parse(list[1]);
                     var y = float.Parse(list[2]); 
                     var z = float.Parse(list[3]);
-                    accelVec.Set(x, y, z);
-                }
-                else if (list[0].Equals("Alt:"))
-                {
-                    alt = float.Parse(list[1]);
-                }
-                else if (list[0].Equals("Temp:"))
-                {
-                    temp = float.Parse(list[1]);
+                    Acceleration.Set(x, y, z);
                 }
                 else if (list[0].Equals("Calibration:"))
                 {
