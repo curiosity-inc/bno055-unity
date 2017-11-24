@@ -1,6 +1,6 @@
 {
   "name": "bno055-unity",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A unity pluguin for BNO055.",
   "keywords": [
     "unity3d",
