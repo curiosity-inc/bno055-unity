@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void DataReceivedEventHandler(string data);
-
 namespace Bno055
 {
+	public delegate void DataReceivedEventHandler(string data);
+	
     public interface IDataReceiver
     {
 
