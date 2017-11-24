@@ -16,7 +16,7 @@ You need to compile and upload the [bunny sketch](https://github.com/adafruit/Ad
 
 ## Get started with your scene.
 
-1. Import [bno055-unity.unitypackage](bno055-unity.unitypackage)
+1. Import an unitypackage file which is found in [Release](https://github.com/curiosity-inc/bno055-unity/releases) page.
 
 2. Attach Scripts/Serial Receiver and Scripts/Tracker to the GameObject. That GameObject rotates as BNO055 moves.
 
