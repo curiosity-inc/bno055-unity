@@ -20,6 +20,7 @@ namespace Bno055
         private Thread thread;
         private bool isRunning = false;
         private byte[] buffer = new byte[512];
+        private byte[] tmp = new byte[512];
         
         private int byteCounter;
 

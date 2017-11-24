@@ -30,7 +30,6 @@ namespace Bno055
         {
             // var q = Quaternion.Euler(pitch, yaw, roll);
             transform.rotation = rotation;
-            Debug.Log(Acceleration.magnitude);
         }
 
         void DataReceiver_OnDataReceived(string incoming)
